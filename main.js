@@ -241,21 +241,62 @@ const pets = [
     }
   ];
 
-  const targetingApp = document.querySelector("#app");
+// this function takes a specified div ID and renders the html for it
+const renderToDom = (divId, htmlToRender) => {
+  const selectedDiv = document.querySelector(divId);
+  //this variable tells the function to find all of the instances within the HTML of the specific ID passed through it
+  selectedDiv.innerHTML = htmlToRender;
+  //this statement takes the variable/method above and assigns the innerHTML method to it which enables the selected div to be assigned the html given to it...which is why there's an equal sign meaning that you're assigning the object method to mean htmlrender, which becomes a parameter in the function renderToDom
+}
 
-  let domString = '';
-  for (const animal of pets) {
+const cardsOnDom = (array) => {
+  let domString = "";
+  for (const pet of array) {
     domString += `<div class="card" style="width: 18rem;">
-    <img src=${animal.imageUrl} class="card-img-top" alt=${animal.name}>
+    <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
     <div class="card-body">
-      <h5 class="card-title">${animal.name}</h5>
-      <p class="card-text">${animal.color}</p>
-      <p class="card-text">${animal.specialSkill}</p>
-      <p class="card-text">${animal.type}</p>
+      <h5 class="card-title">${pet.name}</h5>
+      <p class="card-text">${pet.color}</p>
+      <p class="card-text">${pet.specialSkill}</p>
+      <p class="card-text">${pet.type}</p>
     </div>
   </div>`
   }
+  renderToDom("#app", domString);
+}
+cardsOnDom(pets);
 
-  targetingApp.innerHTML = domString;
+const filter = (array, typeString) => {
+  const typeArray = []; 
+  // this is an empty pair of brackets to suggest that an array is going inside here - arrays =brackets
+  for (const pet of array) {
+    if (pet.type === typeString) {
+      typeArray.push(pet);
+    }
+  }
+return typeArray;
+}
 
-  console.log(domString);
+const showAllCats = document.querySelector("#cats");
+const showAllDogs = document.querySelector("#dogs");
+const showAllDino = document.querySelector("#dino");
+const showAllPets = document.querySelector("#all");
+
+showAllCats.addEventListener('click', () => {
+  const allCats = filter(pets, 'cat');
+  cardsOnDom(allCats);
+});
+
+showAllDogs.addEventListener('click', () => {
+  const allDogs = filter(pets, 'dog');
+  cardsOnDom(allDogs);
+});
+
+showAllDino.addEventListener('click', () => {
+  const allDino = filter(pets, 'dino');
+  cardsOnDom(allDino);
+});
+
+showAllPets.addEventListener('click', () => {
+  cardsOnDom(pets);
+});

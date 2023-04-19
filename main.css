@@ -6,4 +6,66 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+#app > * {
+  flex-basis: 33%;
+  flex-grow: 1;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: darkslategray
+}
+
+.card {
+  margin: 10px;
+  max-width: 30em;
+  max-height: 50em;
+}
+
+.pets-all{
+  margin-right: 5px;
+  background-color: lightblue;
+  border-radius: 10px;
+  border: 0px solid;
+  width: 60px;
+  height: 40px;
+  color: darkslategray
+}
+
+.pets-cats{
+  margin-left: 5px;
+  background-color: lightblue;
+  border-radius: 10px;
+  border: 0px solid;
+  width: 60px;
+  height: 40px;
+  color: darkslategray
+}
+
+.pets-dogs{
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: lightblue;
+  border-radius: 10px;
+  border: 0px solid;
+  width: 60px;
+  height: 40px;
+  color: darkslategray
+}
+
+.pets-dino{
+  margin-left: 5px;
+  background-color: lightblue;
+  border-radius: 10px;
+  border: 0px solid;
+  width: 60px;
+  height: 40px;
+  color: darkslategray
 }

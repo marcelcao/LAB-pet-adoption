@@ -31,7 +31,7 @@ body {
 
 .pets-all{
   margin-right: 5px;
-  background-color: lightblue;
+  background-color: lightgray;
   border-radius: 10px;
   border: 0px solid;
   width: 60px;
@@ -41,7 +41,7 @@ body {
 
 .pets-cats{
   margin-left: 5px;
-  background-color: lightblue;
+  background-color: lightpink;
   border-radius: 10px;
   border: 0px solid;
   width: 60px;
@@ -62,7 +62,7 @@ body {
 
 .pets-dino{
   margin-left: 5px;
-  background-color: lightblue;
+  background-color: lightgreen;
   border-radius: 10px;
   border: 0px solid;
   width: 60px;
@@ -84,6 +84,13 @@ margin-right: 200px;
 
 .cat {
   background-color: lightpink;
+  margin: 10px;
+  max-width: 30em;
+  max-height: 50em;
+}
+
+.dino {
+  background-color: lightgreen;
   margin: 10px;
   max-width: 30em;
   max-height: 50em;

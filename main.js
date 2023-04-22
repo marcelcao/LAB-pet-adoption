@@ -262,6 +262,9 @@ const cardsOnDom = (array) => {
     </div>
   </div>`
   }
+  renderToDom("#app", domString);
+}
+cardsOnDom(pets);
 
 const filter = (array, typeString) => {
   const typeArray = []; 
@@ -297,4 +300,3 @@ showAllDino.addEventListener('click', () => {
 showAllPets.addEventListener('click', () => {
   cardsOnDom(pets);
 });
-  

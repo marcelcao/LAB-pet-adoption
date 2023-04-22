@@ -381,3 +381,7 @@ const startApp = () => {
 }
 startApp();
 // does this regenerate the cards again? need ryan to re-explain.
+
+$('#exampleModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})

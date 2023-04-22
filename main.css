@@ -81,3 +81,10 @@ margin-right: 200px;
   max-width: 30em;
   max-height: 50em;
 }
+
+.cat {
+  background-color: lightpink;
+  margin: 10px;
+  max-width: 30em;
+  max-height: 50em;
+}

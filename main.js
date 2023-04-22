@@ -252,7 +252,8 @@ const renderToDom = (divId, htmlToRender) => {
 const cardsOnDom = (array) => {
   let domString = "";
   for (const pet of array) {
-    domString += `<div class="card" style="width: 18rem;">
+    if (pet.type === 'dog') {
+      domString += `<div class="dog" style="width: 18rem;">
     <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
     <div class="card-body">
       <h5 class="card-title">${pet.name}</h5>
@@ -262,6 +263,18 @@ const cardsOnDom = (array) => {
       <button class="btn btn-danger" id="delete--${pet.id}">Delete</button>
     </div>
   </div>`
+    } else {
+      domString += `<div class="card" style="width: 18rem;">
+    <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
+    <div class="card-body">
+      <h5 class="card-title">${pet.name}</h5>
+      <p class="card-text">${pet.color}</p>
+      <p class="card-text">${pet.specialSkill}</p>
+      <p class="card-text">${pet.type}</p>
+      <button class="btn btn-danger" id="delete--${pet.id}">Delete</button>
+    </div>
+  </div>`
+    }
   }
   renderToDom("#app", domString);
 }

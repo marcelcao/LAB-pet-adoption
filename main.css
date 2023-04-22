@@ -74,3 +74,10 @@ body {
 margin-left: 200px;
 margin-right: 200px;
 }
+
+.dog {
+  background-color: lightblue;
+  margin: 10px;
+  max-width: 30em;
+  max-height: 50em;
+}

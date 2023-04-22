@@ -259,12 +259,15 @@ const cardsOnDom = (array) => {
       <p class="card-text">${pet.color}</p>
       <p class="card-text">${pet.specialSkill}</p>
       <p class="card-text">${pet.type}</p>
+      <button class="btn btn-danger" id="delete--${pet.id}">Delete</button>
     </div>
   </div>`
   }
   renderToDom("#app", domString);
 }
 cardsOnDom(pets);
+
+// note that ${pet.id} not pets because we're looping through pets - so its like pie of pies - pet was what i defined as the part of my whole in the beginning.
 
 const filter = (array, typeString) => {
   const typeArray = []; 
@@ -319,3 +322,27 @@ e.preventDefault();
 }
 
 form.addEventListener('submit', createNewPet);
+
+const app = document.querySelector('#app');
+
+app.addEventListener('click', (e) => {
+  alert(e.target.id);
+  //creates the alert pop up, but it will only say delete--undefined until we define the ID
+  const [, id] = e.target.id.split("--");
+  //this line targets the specific id linked to the card we're trying to delete back to alert pop-up
+  const index = pets.findIndex(pet => pet.id === Number(id));
+  //now we need to loop through our cards to find the specific card we want to delete using the findindex method. 
+  //pets.findIndex finding the index that's on the array of pets 
+  //pet, pet.id (in the example they used e) but this is "taco" - it can be whatever we want it to be, think of the syntax of a for of loop. "the pie of pies"
+  // === Number(id) : what this means is after it loops through all the id's under pets array, we want the found index to equal in TYPE and VALUE with the ID that was definited in the delete button html. the delete button html is "delete--${pets.id}" which is technically a string. however, we want to make it a number, which is why we're gonna pass the ID of that found index into the number method to convert the string to a number
+  pets.splice(index, 1);
+  //now that we found the index of the card we want to delete, we need to "cut" it out from the our index of objects. by using splice what it means is splice(start, deletecount, item1, etc) so in this case we're saying start the splice with the given index, and delete 1 card.
+  cardsOnDom(pets);
+  //now that everything is established, we just need to re-render the cards again to show the updated set with the deleted card.
+})
+const startApp = () => {
+  cardsOnDom(team);
+  // events(); // ALWAYS LAST
+}
+startApp();
+// does this regenerate the cards again? need ryan to re-explain.

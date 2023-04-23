@@ -348,7 +348,7 @@ e.preventDefault();
     name: document.querySelector('#name').value,
     color: document.querySelector('#color').value,
     specialSkill: document.querySelector('#specialSkill').value,
-    type: document.querySelector('#type').value,
+    type: document.querySelector('input[name = "radio-type"]:checked').value,
     imageUrl: document.querySelector('#imageUrl').value,
   }
   pets.push(newPetObj);
@@ -381,7 +381,3 @@ const startApp = () => {
 }
 startApp();
 // does this regenerate the cards again? need ryan to re-explain.
-
-$('#exampleModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})

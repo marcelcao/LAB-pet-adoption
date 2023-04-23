@@ -348,7 +348,7 @@ e.preventDefault();
     name: document.querySelector('#name').value,
     color: document.querySelector('#color').value,
     specialSkill: document.querySelector('#specialSkill').value,
-    type: document.querySelectorAll('#radioTypeCat, #radioTypeDog, #radioTypeDino').value,
+    type: document.querySelector('input[name = "radio-type"]:checked').value,
     imageUrl: document.querySelector('#imageUrl').value,
   }
   pets.push(newPetObj);

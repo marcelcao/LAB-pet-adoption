@@ -36,7 +36,8 @@ body {
   border: 0px solid;
   width: 60px;
   height: 40px;
-  color: darkslategray
+  color: darkslategray;
+  border: 2px solid darkslategray;
 }
 
 .pets-cats{
@@ -46,7 +47,8 @@ body {
   border: 0px solid;
   width: 60px;
   height: 40px;
-  color: darkslategray
+  color: darkslategray;
+  border: 2px solid darkslategray;
 }
 
 .pets-dogs{
@@ -57,7 +59,8 @@ body {
   border: 0px solid;
   width: 60px;
   height: 40px;
-  color: darkslategray
+  color: darkslategray;
+  border: 2px solid darkslategray;
 }
 
 .pets-dino{
@@ -67,7 +70,8 @@ body {
   border: 0px solid;
   width: 60px;
   height: 40px;
-  color: darkslategray
+  color: darkslategray;
+  border: 2px solid darkslategray;
 }
 
 /* .form{
@@ -80,6 +84,7 @@ margin-right: 200px;
   margin: 10px;
   max-width: 30em;
   max-height: 50em;
+  border: 2px solid darkslategray;
 }
 
 .cat {
@@ -87,6 +92,7 @@ margin-right: 200px;
   margin: 10px;
   max-width: 30em;
   max-height: 50em;
+  border: 2px solid darkslategray;
 }
 
 .dino {
@@ -94,6 +100,7 @@ margin-right: 200px;
   margin: 10px;
   max-width: 30em;
   max-height: 50em;
+  border: 2px solid darkslategray;
 }
 
 .form-button {
@@ -103,5 +110,58 @@ margin-right: 200px;
   border: 0px solid;
   width: 120px;
   height: 40px;
-  color: darkslategray
+  color: darkslategray;
+  border: 2px solid darkslategray;
+}
+
+h1 {
+  font-family: 'Caveat Brush', cursive;
+  display: flex;
+  justify-content: center;
+  color: rgb(231, 126, 94);
+  font-size: 150px;
+  flex-wrap: nowrap;
+  margin-bottom: 0px;
+}
+
+.header {
+  background-color: rgb(196, 242, 242);
+  height: 220px;
+  border: 2px solid darkslategray;
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  color: darkslategrey;
+  font-size: large;
+  font-style: italic;
+  flex-wrap: nowrap;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-family: 'Caveat Brush', cursive;
+  color: darkslategrey;
+  font-size: medium;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}
+
+.card-text {
+  font-family: 'Quicksand', sans-serif;
+  color: darkslategrey;
+  font-size: medium;
+  font-weight: 900;
+}
+
+.card-text-head {
+  font-family: 'Quicksand', sans-serif;
+  color: darkslategrey;
+  font-size: medium;
+  margin-left: 30px;
+  font-weight: 4000;
 }

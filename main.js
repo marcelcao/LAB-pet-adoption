@@ -279,9 +279,9 @@ const cardsOnDom = (array) => {
     <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
     <div class="card-body">
       <h5 class="card-title">${pet.name}</h5>
-      <p class="card-text">${pet.color}</p>
-      <p class="card-text">${pet.specialSkill}</p>
-      <p class="card-text">${pet.type}</p>
+      <p class="card-text-head">Color: ${pet.color}</p>
+      <p class="card-text-head">Special Skill: ${pet.specialSkill}</p>
+      <p class="card-text-head">Type: ${pet.type}</p>
       <button class="btn btn-danger" id="delete--${pet.id}">Delete</button>
     </div>
   </div>`
@@ -290,9 +290,9 @@ const cardsOnDom = (array) => {
     <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
     <div class="card-body">
       <h5 class="card-title">${pet.name}</h5>
-      <p class="card-text">${pet.color}</p>
+      <p class="card-text">'Color: ${pet.color}'</p>
       <p class="card-text">${pet.specialSkill}</p>
-      <p class="card-text">${pet.type}</p>
+      <p class="card-text">Type: ${pet.type}</p>
       <button class="btn btn-danger" id="delete--${pet.id}">Delete</button>
     </div>
   </div>`
@@ -351,7 +351,7 @@ e.preventDefault();
     type: document.querySelector('input[name = "radio-type"]:checked').value,
     imageUrl: document.querySelector('#imageUrl').value,
   }
-  pets.push(newPetObj);
+  pets.unshift(newPetObj);
   cardsOnDom(pets);
   form.reset();
 }
@@ -376,7 +376,7 @@ app.addEventListener('click', (e) => {
   //now that everything is established, we just need to re-render the cards again to show the updated set with the deleted card.
 })
 const startApp = () => {
-  cardsOnDom(team);
+  cardsOnDom(pets);
   // events(); // ALWAYS LAST
 }
 startApp();

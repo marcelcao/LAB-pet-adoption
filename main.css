@@ -82,25 +82,28 @@ margin-right: 200px;
 .dog {
   background-color: lightblue;
   margin: 10px;
-  max-width: 30em;
+  max-width: 25em;
   max-height: 50em;
   border: 2px solid darkslategray;
+  border-radius: 40px;
 }
 
 .cat {
   background-color: lightpink;
   margin: 10px;
-  max-width: 30em;
+  max-width: 25em;
   max-height: 50em;
   border: 2px solid darkslategray;
+  border-radius: 40px;
 }
 
 .dino {
   background-color: lightgreen;
   margin: 10px;
-  max-width: 30em;
+  max-width: 25em;
   max-height: 50em;
   border: 2px solid darkslategray;
+  border-radius: 40px;
 }
 
 .form-button {
@@ -164,4 +167,67 @@ h2 {
   font-size: medium;
   margin-left: 30px;
   font-weight: 4000;
+}
+
+/* .card-img-top {
+  border-radius: 40px 40px 0 0;
+} */
+
+
+.delete-div-cat {
+  border: 0px;
+  font-weight: bold;
+  font-size: medium;
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.delete-div-cat .delete-button {
+  background-color: lightpink;
+  color: darkslategrey;
+  border: .5px solid darkslategray;
+  box-shadow: 2px 2px darkslategray;
+}
+
+.delete-div-dog {
+  border: 0px;
+  font-weight: bold;
+  font-size: medium;
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.delete-div-dog .delete-button {
+  background-color: lightblue;
+  color: darkslategrey;
+  border: .5px solid darkslategray;
+  box-shadow: 2px 2px darkslategray;
+}
+
+.delete-div-dino {
+  border: 0px;
+  font-weight: bold;
+  font-size: medium;
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.delete-div-dino .delete-button {
+  background-color: lightgreen;
+  color: darkslategrey;
+  border: .5px solid darkslategray;
+  box-shadow: 2px 2px darkslategray;
+}
+
+
+
+
+.card-body {
+  margin-bottom: 30px;
 }

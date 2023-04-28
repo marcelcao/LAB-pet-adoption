@@ -37,7 +37,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
       type: "cat".charAt(0).toUpperCase() + "cat".slice(1),
-      imageUrl: "http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg"
+      imageUrl: "https://www.thesprucepets.com/thmb/APYdMl_MTqwODmH4dDqaY5q0UoE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/all-about-tabby-cats-552489-hero-a23a9118af8c477b914a0a1570d4f787.jpg"
     },
     {
       id: 6,
@@ -254,35 +254,41 @@ const cardsOnDom = (array) => {
   for (const pet of array) {
     if (pet.type === 'Dog') {
       domString += `<div class="dog" style="width: 18rem;">
-    <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
-    <div class="card-body">
-      <h5 class="card-title">${pet.name}</h5>
-      <p class="card-text">${pet.color}</p>
-      <p class="card-text">${pet.specialSkill}</p>
-      <p class="card-text">${pet.type}</p>
-      <button class="btn btn-danger" id="delete--${pet.id}">Delete</button>
-    </div>
-  </div>`
-    } else if (pet.type === 'Cat') {
-      domString += `<div class="cat" style="width: 18rem;">
-    <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
-    <div class="card-body">
-      <h5 class="card-title">${pet.name}</h5>
-      <p class="card-text">${pet.color}</p>
-      <p class="card-text">${pet.specialSkill}</p>
-      <p class="card-text">${pet.type}</p>
-      <button class="btn btn-danger" id="delete--${pet.id}">Delete</button>
-    </div>
-  </div>`
-    } else if (pet.type === 'Dino') {
-      domString += `<div class="dino" style="width: 18rem;">
-    <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
+      <div class="delete-div-dog">
+      <button class="delete-button" id="delete--${pet.id}">X</button>
+      </div>
+      <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
     <div class="card-body">
       <h5 class="card-title">${pet.name}</h5>
       <p class="card-text-head">Color: ${pet.color}</p>
       <p class="card-text-head">Special Skill: ${pet.specialSkill}</p>
       <p class="card-text-head">Type: ${pet.type}</p>
-      <button class="btn btn-danger" id="delete--${pet.id}">Delete</button>
+    </div>
+  </div>`
+    } else if (pet.type === 'Cat') {
+      domString += `<div class="cat" style="width: 18rem;">
+      <div class="delete-div-cat">
+      <button class="delete-button" id="delete--${pet.id}">X</button>
+      </div>
+      <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
+    <div class="card-body">
+      <h5 class="card-title">${pet.name}</h5>
+      <p class="card-text-head">Color: ${pet.color}</p>
+      <p class="card-text-head">Special Skill: ${pet.specialSkill}</p>
+      <p class="card-text-head">Type: ${pet.type}</p>
+    </div>
+  </div>`
+    } else if (pet.type === 'Dino') {
+      domString += `<div class="dino" style="width: 18rem;">
+      <div class="delete-div-dino">
+      <button class="delete-button" id="delete--${pet.id}">X</button>
+      </div>
+      <img src=${pet.imageUrl} class="card-img-top" alt=${pet.name}>
+    <div class="card-body">
+      <h5 class="card-title">${pet.name}</h5>
+      <p class="card-text-head">Color: ${pet.color}</p>
+      <p class="card-text-head">Special Skill: ${pet.specialSkill}</p>
+      <p class="card-text-head">Type: ${pet.type}</p>
     </div>
   </div>`
     } else {
